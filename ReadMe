@@ -1,0 +1,20 @@
+## JupitarProject2
+This test is focus on automating  the login functionality on Jupitar Toy.
+
+In this test BDD is demonstrated as well as a clean separation of concern between the page objects and steps. 
+page objects model design is preferred for code  reusability 
+
+
+However this automation is limited to the requirements.
+
+### Prerequisite
+
+Ensure Java is installed on your machine to be able to run this project, maven is used to manage the dependencies
+Java 1.8 
+Maven 3.6.3
+ 
+### Technical Decisions
+
+This automation is written with Java on maven, however it can be replicated in JavaScript.
+
+Test can be run using mvn clean test to generate a cucumber report.It can be ran through feature file and Runner class

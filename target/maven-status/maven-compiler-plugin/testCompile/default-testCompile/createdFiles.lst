@@ -1,0 +1,5 @@
+stepsDef\LoginStepDef.class
+stepsDef\Common.class
+page\HomePage.class
+runner\TestRunner.class
+page\LoginPage.class
