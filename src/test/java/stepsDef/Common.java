@@ -14,7 +14,7 @@ public class Common extends TestBase{
 		super();
 	}
 	
-	//Chris
+
 	@Before 
 	public void setUp() {
 		TestBase.initialization();
