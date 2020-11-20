@@ -10,8 +10,9 @@ import cucumber.api.junit.Cucumber;
 		
 		features = {"src/test/resources"},  //Path of feature file
 		glue =     {"stepsDef"},            //path of step definition
-
-format ={"pretty","json:target/cucumber-reports/Cucumber.json","junit:target/cucumber-reports/Cucumber.xml","html:target/cucumber-reports" },
+		//format =   {"pretty", "json:target/cucumber.json","html:target/site/cucumber-pretty"},  //generate format for the test
+				 
+format ={"pretty","html:target/cucumber-html-report","json:target/cucumber.json" },
 		monochrome = true,  //display the console in a proper readable format
 		dryRun  = false,  //check the mapping is proper between the feature file and step def file
 		tags = {"@login"}  //select test to run

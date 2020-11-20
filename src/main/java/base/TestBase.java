@@ -50,8 +50,8 @@ public class TestBase {
     	driver.manage().deleteAllCookies();
     	driver.manage().timeouts().pageLoadTimeout(TestUtility.pageLoadTimeout, TimeUnit.SECONDS);
     	driver.manage().timeouts().implicitlyWait(TestUtility.ImplicitWait,TimeUnit.SECONDS);
-    	//driver.get("https://www.bbc.co.uk");
-    	driver.get(prop.getProperty("url"));
+    	//driver.get(prop.getProperty("url"));
+		//driver.get(prop.getProperty("URL"));
     	}  
     
 

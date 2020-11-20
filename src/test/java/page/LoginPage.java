@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-
 import base.TestBase;
 
 public class LoginPage extends TestBase{
@@ -18,7 +17,10 @@ public class LoginPage extends TestBase{
 	
 	@FindBy(how=How.ID,using ="loginPassword")
 	WebElement passwordTxtField;
-	
+
+	@FindBy(how=How.ID,using ="agree")
+	WebElement termsOfAgreementCheckBox;
+
 	@FindBy(how=How.XPATH,using ="//button[@type='submit']")
 	WebElement loginSubmitBtn;
 	
@@ -35,7 +37,12 @@ public class LoginPage extends TestBase{
 	public LoginPage() {
 	PageFactory.initElements(driver, this);
 	}
-	
+
+	public void GoToURL(String url)
+	{
+		driver.get(url);
+	}
+
    public void clickLoginLink() {
 	loginLink.click();
     }
@@ -43,12 +50,16 @@ public class LoginPage extends TestBase{
    public void loginIntoApp(String username, String password){
 	usernameTxtField.sendKeys(username);
 	passwordTxtField.sendKeys(password);
-	loginSubmitBtn.click();
-	
+
    }
- 
+ public void clickTermsOfAgreementCheckBox(){
+	 termsOfAgreementCheckBox.click();
+ }
    public String validateCorrectUserName() {
 	return  userNameLabel.getText();
+   }
+   public void clickLoginButton(){
+	   loginSubmitBtn.click();
    }
    
    public void clickLogoutLink() {

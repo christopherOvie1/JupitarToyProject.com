@@ -46,9 +46,9 @@
 						</goals>
 						<configuration>
 							<projectName>JupitarProject2</projectName>
-							<outputDirectory>${project.build.directory}/cucumber-report.html</outputDirectory>
+							<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
 
-							<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+							<cucumberOutput>${project.build.directory}/cucumber-reports</cucumberOutput>
 						</configuration>
 					</execution>
 				</executions>
