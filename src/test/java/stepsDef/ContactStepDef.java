@@ -2,6 +2,7 @@ package stepsDef;
 
 
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -46,8 +47,25 @@ public class ContactStepDef {
         contactPage.confirmContactPageBackButton();
     }
 
-   /* @Then("^user should validate the following error messages  as  \"([^\"]*)\" , \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void userShouldValidateTheFollowingErrorMessagesAsAnd( )  {
-        c);
-    }*/
+    @And("^user also validate the feedback error warning error message \"([^\"]*)\"$")
+    public void userAlsoValidateTheFeedbackErrorWarningErrorMessage(String expectedFeedbackMessage) throws Throwable {
+      String  actualFeebbackMessage = contactPage.validateFeebbackErrorMessage();
+        System.out.println(actualFeebbackMessage);
+        Assert.assertEquals(expectedFeedbackMessage,actualFeebbackMessage);
+    }
+
+
+    @Then("^user should validate the following error messages  as  \"([^\"]*)\"  , \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void userShouldValidateTheFollowingErrorMessagesAsAnd(String forename, String email, String message) throws Throwable {
+       // contactPage.validateforenameErrorMsg();
+        System.out.println(contactPage.validateforenameErrorMsg());
+        Assert.assertEquals(forename,contactPage.validateforenameErrorMsg());
+        System.out.println( contactPage.validateEmailErrorMsg());
+        Assert.assertEquals(email,contactPage.validateEmailErrorMsg());
+        System.out.println( contactPage.validateMessageErrorMsg());
+        Assert.assertEquals(message,contactPage.validateMessageErrorMsg());
+
+    }
+
+
 }

@@ -21,9 +21,9 @@ public class Common extends TestBase{
 	}
 
 	
-/*	@After
+	@After
 	public void tearDown() {
 		driver.quit();
-	}*/
+	}
 
 }

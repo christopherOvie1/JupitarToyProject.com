@@ -1,5 +1,10 @@
-stepsDef\LoginStepDef.class
-stepsDef\Common.class
-page\HomePage.class
-runner\TestRunner.class
+page\ShopPage.class
+stepsDef\ShopStepDef.class
+waits\MyWebDriverWait.class
+page\ContactPage.class
 page\LoginPage.class
+stepsDef\LoginStepDef.class
+stepsDef\ContactStepDef.class
+page\HomePage.class
+stepsDef\Common.class
+runner\TestRunner.class

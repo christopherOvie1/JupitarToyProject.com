@@ -1,6 +1,6 @@
 package stepsDef;
 
-import cucumber.api.PendingException;
+
 import cucumber.api.java.en.And;
 import org.junit.Assert;
 import cucumber.api.java.en.Given;
@@ -20,21 +20,17 @@ public class LoginStepDef{
 		 loginPage = new LoginPage();
 	 }
 	 @Given("^user is on \"([^\"]*)\"$")
-	public void userIsOn(String url) throws Throwable {
+	public void userIsOn(String url)  {
 		loginPage.GoToURL(url);
 		String homePageTitle = homePage.validateHomePageTitle();
 		System.out.println(homePageTitle);
-		Assert.assertEquals("Jupiter Toys", homePageTitle);
+		//Assert.assertEquals(url,homePage.validateHomePageTitle());
 	}
 	@Given("^user click login link$")
-	public void user_click_login_link() throws Throwable {
+	public void user_click_login_link(){
 		loginPage.clickLoginLink();
 	}
 
-	/*@When("^user attempts to login by entering  \"([^\"]*)\"  and  \"([^\"]*)\"$")
-	public void user_attempts_to_login_by_entering_and(String username, String password) throws Throwable {
-		loginPage.loginIntoApp(username, password);
-	 }*/
 	@And("^user attempts to login by entering  \"([^\"]*)\"  and  \"([^\"]*)\" on a pop up window$")
 	public void userAttemptsToLoginByEnteringAndOnAPopUpWindow(String username, String password) throws Throwable {
 		loginPage.loginIntoApp(username, password);

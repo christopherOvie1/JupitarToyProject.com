@@ -15,7 +15,7 @@ Scenario Outline: Logging in with valid credentials
      |username|password|
      |  test  |letmein |
 
- Scenario Outline: Logging in with valid credentials by ticking on  terms of agreement
+ Scenario Outline: Logging in with valid credentials by ticking on terms of agreement
 
    Given user is on "http://jupiter2.cloud.planittesting.com/#/"
    And user click login link
@@ -27,4 +27,4 @@ Scenario Outline: Logging in with valid credentials
 
     Examples:
       |username|password|
-      |  test  |letmein |
+     |  test  |letmein |

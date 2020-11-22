@@ -7,6 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import waits.MyWebDriverWait;
 
 public class ContactPage extends TestBase{
 
@@ -27,6 +28,9 @@ public class ContactPage extends TestBase{
 
     @FindBy(how= How.CSS,using ="body > div.container-fluid > div > a")
     WebElement backButton;
+
+    @FindBy(how= How.CSS,using ="#header-message > div")
+    WebElement feebbackErrorMessage;
 
     @FindBy(how= How.ID,using ="forename-err")
    WebElement forenameRequiredErrorMsg;
@@ -56,14 +60,28 @@ public class ContactPage extends TestBase{
     public void clickMessageSubmitBtn(){
         messageSubmitBtn.click();
     }
-    public String confirmContactPageBackButton(){
-        WebDriverWait  wait = new WebDriverWait(driver, 40);
-        WebElement element = wait.until(ExpectedConditions.visibilityOf(backButton));
-        return backButton.getText();
-    }
+    public void confirmContactPageBackButton(){
+        MyWebDriverWait wait= new MyWebDriverWait();
+        wait.waitForElementToBeVisible(backButton ,30);
 
+    }
     public String validateSuccessMessageTxt(){
        return successMessageTxt.getText();
+    }
+    public  String validateFeebbackErrorMessage(){
+      return   feebbackErrorMessage.getText();
+    }
 
+    public String validateforenameErrorMsg(){
+   return forenameRequiredErrorMsg.getText();
+    }
+
+    public String validateEmailErrorMsg()
+    {
+       return emailRequiredErrorMsg.getText();
+    }
+
+    public String validateMessageErrorMsg(){
+        return messageRequiredErrorMsg.getText();
     }
 }
