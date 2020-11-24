@@ -16,11 +16,6 @@ public class ShopPage extends TestBase{
     @FindBy(how= How.LINK_TEXT,using ="Shop")
     WebElement shopLink;
 
-
-    public boolean validateShopPageTitle(String url) {String URL = "https://jupiter.cloud.planittesting.com/#/";
-      return  driver.getCurrentUrl().equals(URL+url);
-    }
-
  // @FindBy(how = How.XPATH, using = "//div[@class='products ng-scope']/ul/li")
  @FindBy(how = How.XPATH, using = "//div[@class='products ng-scope']/ul/li")
   private List<WebElement> allProducts;
@@ -31,6 +26,9 @@ public class ShopPage extends TestBase{
     private String productSinglePrice;
     private String productPrice1;
     private String productPrice2;
+
+    @FindBy(how= How.CSS,using ="#nav-cart > a > span")
+    WebElement numberOfItemsReflected;
 
     public ShopPage(){
         PageFactory.initElements(driver,this);
@@ -45,9 +43,11 @@ public class ShopPage extends TestBase{
         WebElement element = allProducts.stream().filter(x->x.findElement(productName).getText().toLowerCase().equals(product.toLowerCase())).findFirst().get();
         element.findElement(productBuyBtn).click();
         productSinglePrice = element.findElement(productPrice).getText();
-
     }
 
+    public boolean confirmNumberOfProduct(){
+      return  numberOfItemsReflected.isDisplayed();
+    }
     public void selectProduct(String product1, String product2) throws Exception {
         //  allProducts.stream().map(s->s.getText()).collect(Collectors.toList())// allProducts.get(0).getText()
         //  System.out.println(allProducts.get(4).getText());

@@ -2,17 +2,16 @@ Feature: shopping_Test
 
 Scenario Outline: Validate shopping successful
 
-Given user is on "http://jupiter.cloud.planittesting.com/#/"
+     Given user is on "https://jupiter.cloud.planittesting.com/#/"
      And user click shop link
-     #Then user is taken to product listing page
-
-#     Then  user confirm choice "stuffedFrog" and "fluffyBunny"
-#     And user confirms the price of "stuffedFrog" and "fluffyBunny"
+     Then user is taken to "shop" page
      When user made attempt to shop  by adding "<product1>" and "<product2>" to the cart
-#     When user click cart link
-#     Then user confirms correct items are added to the cart
+     Then user confirms correct items are added to the cart
+     And user click cart link
+
+
 #    And user update the number of each item in the cart
-#     And user confirms the price is reflected accuratly
+
 #     When user click the checkout button
 #     Then user should be in payment page
 #     And user attempts payment by entering "<myForename>" "<myEmail>" "<myTelephoneNo>" "<cardNumber>" and "<cardNumber>"
@@ -23,6 +22,9 @@ Given user is on "http://jupiter.cloud.planittesting.com/#/"
        |  Stuffed Frog |fluffy Bunny| ovie       | ovie@gmail.com        | 07654323455   |JT1605952047008 |
        |  smiley bear |SMILEY FACE| ovie       | ovie@gmail.com        | 07654323455   |JT1605952047008 |
 #
+
+
+
 
 
 

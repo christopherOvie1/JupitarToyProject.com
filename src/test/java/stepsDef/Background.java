@@ -7,10 +7,11 @@ import cucumber.api.java.Before;
 
 
 
-public class Common extends TestBase{
-	
+public class Background extends TestBase{
+	//before each test case --launch the browser
+	//after each test case --quit the browser
 	// use java super keyword to call method initialization into action defined in the super class  TestBase
-	public Common() {
+	public Background() {
 		super();
 	}
 	//Test
@@ -21,9 +22,9 @@ public class Common extends TestBase{
 	}
 
 	
-	@After
+/*	@After
 	public void tearDown() {
 		driver.quit();
-	}
+	}*/
 
 }

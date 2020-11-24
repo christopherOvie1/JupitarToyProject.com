@@ -32,6 +32,9 @@ public class LoginPage extends TestBase{
 	
 	@FindBy(how=How.CSS,using ="body > div.popup.modal.hide.ng-scope.in > div.modal-footer > a.btn.btn-success")
 	WebElement logoutBtn;
+
+	@FindBy(how=How.CSS,using ="#login-error > strong ")
+	WebElement loginErrorMsg;
 	
 	//page actions
 	public LoginPage() {
@@ -50,7 +53,6 @@ public class LoginPage extends TestBase{
    public void loginIntoApp(String username, String password){
 	usernameTxtField.sendKeys(username);
 	passwordTxtField.sendKeys(password);
-
    }
  public void clickTermsOfAgreementCheckBox(){
 	 termsOfAgreementCheckBox.click();
@@ -69,4 +71,8 @@ public class LoginPage extends TestBase{
    public void clickLogoutBtn() {
 	   logoutBtn.click();  
    }
+public String validateLoginErrorMsg(){
+    return 	loginErrorMsg.getText();
+}
    }
+
