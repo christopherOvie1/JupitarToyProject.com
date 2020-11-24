@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="runner.TestRunner" time="26.179" tests="14" errors="0" skipped="6" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="runner.TestRunner" time="98.288" tests="71" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_241\jre\bin"/>
@@ -64,64 +64,75 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="Given user is on &quot;http://jupiter.cloud.planittesting.com/#/&quot;" classname="| test | letmein |" time="0.001"/>
+  <testcase name="Given user is on &quot;https://jupiter.cloud.planittesting.com/#/&quot;" classname="| test | nothappenin |" time="0.001"/>
+  <testcase name="And user click login link" classname="| test | nothappenin |" time="0"/>
+  <testcase name="And user click login link" classname="| test | nothappenin |" time="0.001"/>
+  <testcase name="And user click login link" classname="| test | nothappenin |" time="0"/>
+  <testcase name="And user attempts to login by entering  &quot;test&quot;  and  &quot;nothappenin&quot; on a pop up window" classname="| test | nothappenin |" time="0"/>
+  <testcase name="And user attempts to login by entering  &quot;test&quot;  and  &quot;nothappenin&quot; on a pop up window" classname="| test | nothappenin |" time="0"/>
+  <testcase name="And user attempts to login by entering  &quot;test&quot;  and  &quot;nothappenin&quot; on a pop up window" classname="| test | nothappenin |" time="0"/>
+  <testcase name="When user click on login button" classname="| test | nothappenin |" time="0"/>
+  <testcase name="When user click on login button" classname="| test | nothappenin |" time="0"/>
+  <testcase name="When user click on login button" classname="| test | nothappenin |" time="0"/>
+  <testcase name="Then user  should validate the error message &quot;Your login details are incorrect&quot;" classname="| test | nothappenin |" time="0"/>
+  <testcase name="Then user  should validate the error message &quot;Your login details are incorrect&quot;" classname="| test | nothappenin |" time="0"/>
+  <testcase name="| test | nothappenin |" classname="| test | nothappenin |" time="0"/>
+  <testcase name="| test | nothappenin |" classname="| test | nothappenin |" time="0.003"/>
+  <testcase name="| test | nothappenin |" classname="| test | nothappenin |" time="0"/>
+  <testcase name="Given user is on &quot;https://jupiter2.cloud.planittesting.com/#/&quot;" classname="| test | nothappenin |" time="0"/>
+  <testcase name="Given user is on &quot;https://jupiter2.cloud.planittesting.com/#/&quot;" classname="| test | nothappenin |" time="0"/>
+  <testcase name="Then user  should validate the error message &quot;You must agree to the terms of service&quot;" classname="| test | nothappenin |" time="0"/>
+  <testcase name="And user clicks terms of reference" classname="| test | nothappenin |" time="0"/>
+  <testcase name="Given user is on &quot;https://jupiter.cloud.planittesting.com/#/&quot;" classname="| test | letmein |" time="0"/>
   <testcase name="And user click login link" classname="| test | letmein |" time="0"/>
-  <testcase name="And user click login link" classname="| test | letmein |" time="0">
-    <skipped/>
-  </testcase>
+  <testcase name="And user click login link" classname="| test | letmein |" time="0"/>
   <testcase name="And user attempts to login by entering  &quot;test&quot;  and  &quot;letmein&quot; on a pop up window" classname="| test | letmein |" time="0"/>
-  <testcase name="And user attempts to login by entering  &quot;test&quot;  and  &quot;letmein&quot; on a pop up window" classname="| test | letmein |" time="0">
-    <skipped/>
-  </testcase>
+  <testcase name="And user attempts to login by entering  &quot;test&quot;  and  &quot;letmein&quot; on a pop up window" classname="| test | letmein |" time="0"/>
   <testcase name="When user click on login button" classname="| test | letmein |" time="0"/>
-  <testcase name="When user click on login button" classname="| test | letmein |" time="0">
-    <skipped/>
-  </testcase>
+  <testcase name="When user click on login button" classname="| test | letmein |" time="0"/>
   <testcase name="Then user  &quot;test&quot; should be able to confirm login is successful" classname="| test | letmein |" time="0"/>
-  <testcase name="Then user  &quot;test&quot; should be able to confirm login is successful" classname="| test | letmein |" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="| test | letmein |" classname="| test | letmein |" time="0.838"/>
-  <testcase name="| test | letmein |" classname="| test | letmein |" time="0.01">
-    <failure message="expected:&lt;Jupiter Toys[]&gt; but was:&lt;Jupiter Toys[ 2]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<Jupiter Toys[]> but was:<Jupiter Toys[ 2]>
-]]></failure>
-  </testcase>
-  <testcase name="Given user is on &quot;http://jupiter2.cloud.planittesting.com/#/&quot;" classname="| test | letmein |" time="0.01">
-    <failure message="expected:&lt;Jupiter Toys[]&gt; but was:&lt;Jupiter Toys[ 2]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<Jupiter Toys[]> but was:<Jupiter Toys[ 2]>
-]]></failure>
-    <system-out><![CDATA[
-  @login
-  Scenario Outline: Logging in with valid credentials                                 # LoginPom.feature:18
-    Given user is on "http://jupiter.cloud.planittesting.com/#/"                      # LoginStepDef.userIsOn(String)
-    And user click login link                                                         # LoginStepDef.user_click_login_link()
-    And user attempts to login by entering  "test"  and  "letmein" on a pop up window # LoginStepDef.userAttemptsToLoginByEnteringAndOnAPopUpWindow(String,String)
-    When user click on login button                                                   # LoginStepDef.userClickOnLoginButton()
-    Then user  "test" should be able to confirm login is successful                   # LoginStepDef.user_should_be_able_to_confirm_login_is_successful(String)
-
-  Scenario Outline: Logging in with valid credentials by ticking on  terms of agreement        # LoginPom.feature:20
-    Given user is on "http://jupiter2.cloud.planittesting.com/#/"
-    And user click login link
-    And user attempts to login by entering  "<username>"  and  "<password>" on a pop up window
-    And user clicks terms of reference
-    When user click on login button
-    Then user  "<username>" should be able to confirm login is successful
-    And user log out of the application
-
-    Examples: 
-Jupiter Toys 2
-]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 4445
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-Nov 22, 2020 9:10:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-]]></system-err>
-  </testcase>
-  <testcase name="And user clicks terms of reference" classname="| test | letmein |" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="And user log out of the application" classname="| test | letmein |" time="0">
-    <skipped/>
-  </testcase>
+  <testcase name="And user log out of the application" classname="| test | letmein |" time="0"/>
+  <testcase name="And user log out of the application" classname="| test | letmein |" time="0"/>
+  <testcase name="| test | letmein |" classname="| test | letmein |" time="0.001"/>
+  <testcase name="| test | letmein |" classname="| test | letmein |" time="0"/>
+  <testcase name="Given user is on &quot;https://jupiter2.cloud.planittesting.com/#/&quot;" classname="| test | letmein |" time="0"/>
+  <testcase name="And user clicks terms of reference" classname="| test | letmein |" time="0"/>
+  <testcase name="Then user  &quot;test&quot; should confirm that login is successful" classname="| test | letmein |" time="0"/>
+  <testcase name="Given user is on &quot;https://jupiter.cloud.planittesting.com/#/&quot;" classname="| Stuffed Frog | fluffy Bunny | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="And user click shop link" classname="| Stuffed Frog | fluffy Bunny | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="Then user is taken to &quot;shop&quot; page" classname="| Stuffed Frog | fluffy Bunny | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="When user made attempt to shop  by adding &quot;Stuffed Frog&quot; and &quot;fluffy Bunny&quot; to the cart" classname="| Stuffed Frog | fluffy Bunny | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="Then user confirms correct items are added to the cart" classname="| Stuffed Frog | fluffy Bunny | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="And user click cart link" classname="| Stuffed Frog | fluffy Bunny | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="| Stuffed Frog | fluffy Bunny | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" classname="| Stuffed Frog | fluffy Bunny | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="Given user is on &quot;https://jupiter.cloud.planittesting.com/#/&quot;" classname="| smiley bear | SMILEY FACE | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="And user click shop link" classname="| smiley bear | SMILEY FACE | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="Then user is taken to &quot;shop&quot; page" classname="| smiley bear | SMILEY FACE | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="When user made attempt to shop  by adding &quot;smiley bear&quot; and &quot;SMILEY FACE&quot; to the cart" classname="| smiley bear | SMILEY FACE | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="Then user confirms correct items are added to the cart" classname="| smiley bear | SMILEY FACE | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="And user click cart link" classname="| smiley bear | SMILEY FACE | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0"/>
+  <testcase name="| smiley bear | SMILEY FACE | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" classname="| smiley bear | SMILEY FACE | ovie | ovie@gmail.com | 07654323455 | JT1605952047008 |" time="0.001"/>
+  <testcase name="Given user is on &quot;https://jupiter.cloud.planittesting.com/#/&quot;" classname="| testa | testa@gmail.com | ready |" time="0"/>
+  <testcase name="When user clicks on  contact link" classname="| testa | testa@gmail.com | ready |" time="0"/>
+  <testcase name="Then user is taken to &quot;contact&quot; page" classname="| testa | testa@gmail.com | ready |" time="0"/>
+  <testcase name="And user enters the  mandatory details &quot;testa&quot;,&quot;testa@gmail.com&quot;  and  &quot;ready&quot;" classname="| testa | testa@gmail.com | ready |" time="0"/>
+  <testcase name="When user click on submit button" classname="| testa | testa@gmail.com | ready |" time="0"/>
+  <testcase name="Then user should be on contact page" classname="| testa | testa@gmail.com | ready |" time="0"/>
+  <testcase name="Then user &quot;testa&quot; should validate see successMessage" classname="| testa | testa@gmail.com | ready |" time="0"/>
+  <testcase name="| testa | testa@gmail.com | ready |" classname="| testa | testa@gmail.com | ready |" time="0"/>
+  <testcase name="Given user is on &quot;https://jupiter.cloud.planittesting.com/#/&quot;" classname="| testab | testab@yahoo.com | please call |" time="0"/>
+  <testcase name="When user clicks on  contact link" classname="| testab | testab@yahoo.com | please call |" time="0"/>
+  <testcase name="Then user is taken to &quot;contact&quot; page" classname="| testab | testab@yahoo.com | please call |" time="0"/>
+  <testcase name="And user enters the  mandatory details &quot;testab&quot;,&quot;testab@yahoo.com&quot;  and  &quot;please call&quot;" classname="| testab | testab@yahoo.com | please call |" time="0"/>
+  <testcase name="When user click on submit button" classname="| testab | testab@yahoo.com | please call |" time="0"/>
+  <testcase name="Then user should be on contact page" classname="| testab | testab@yahoo.com | please call |" time="0"/>
+  <testcase name="Then user &quot;testab&quot; should validate see successMessage" classname="| testab | testab@yahoo.com | please call |" time="0"/>
+  <testcase name="| testab | testab@yahoo.com | please call |" classname="| testab | testab@yahoo.com | please call |" time="0"/>
+  <testcase name="Given user is on &quot;https://jupiter.cloud.planittesting.com/#/&quot;" classname="Scenario: Validate error messages" time="0"/>
+  <testcase name="When user clicks on  contact link" classname="Scenario: Validate error messages" time="0"/>
+  <testcase name="Then user is taken to &quot;contact&quot; page" classname="Scenario: Validate error messages" time="0"/>
+  <testcase name="And user click on submit button" classname="Scenario: Validate error messages" time="0"/>
+  <testcase name="Then user should validate the following error messages  as  &quot;Forename is required&quot;  , &quot;Email is required&quot; and &quot;Message is required&quot;" classname="Scenario: Validate error messages" time="0"/>
+  <testcase name="And user also validate the feedback error warning error message &quot;We welcome your feedback - but we won&apos;t get it unless you complete the form correctly.&quot;" classname="Scenario: Validate error messages" time="0"/>
+  <testcase name="Scenario: Validate error messages" classname="Scenario: Validate error messages" time="0.001"/>
 </testsuite>
