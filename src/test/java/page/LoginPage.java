@@ -9,7 +9,7 @@ import base.TestBase;
 public class LoginPage extends TestBase{
 	
 	//object repositories
-	@FindBy(how=How.LINK_TEXT,using ="Login")
+	@FindBy(how=How.CSS,using ="#nav-login > ng-login > a")
 	WebElement loginLink;
 	
 	@FindBy(how=How.ID,using ="loginUserName")
@@ -35,12 +35,19 @@ public class LoginPage extends TestBase{
 
 	@FindBy(how=How.CSS,using ="#login-error > strong ")
 	WebElement loginErrorMsg;
+
+	@FindBy(how = How.XPATH, using = "//*[@class= 'btn btn-cancel']")
+	WebElement cancelBtn;
 	
 	//page actions
 	public LoginPage() {
 	PageFactory.initElements(driver, this);
 	}
 
+	public void goToURL(String url)
+	{
+		driver.get(url);
+	}
 	public void GoToURL(String url)
 	{
 		driver.get(url);
@@ -50,17 +57,19 @@ public class LoginPage extends TestBase{
 	loginLink.click();
     }
 
-   public void loginIntoApp(String username, String password){
+
+   public void loginIntoApp(String username, String password)  {
 	usernameTxtField.sendKeys(username);
 	passwordTxtField.sendKeys(password);
    }
- public void clickTermsOfAgreementCheckBox(){
+   public void clickTermsOfAgreementCheckBox(){
 	 termsOfAgreementCheckBox.click();
  }
    public String validateCorrectUserName() {
 	return  userNameLabel.getText();
    }
-   public void clickLoginButton(){
+   public void clickLoginButton() throws InterruptedException {
+
 	   loginSubmitBtn.click();
    }
    
@@ -71,8 +80,15 @@ public class LoginPage extends TestBase{
    public void clickLogoutBtn() {
 	   logoutBtn.click();  
    }
-public String validateLoginErrorMsg(){
+
+
+
+   public String validateLoginErrorMsg(){
     return 	loginErrorMsg.getText();
+}
+
+public String validatePopUpWindow(){
+	return 	cancelBtn.getText();
 }
    }
 

@@ -1,4 +1,4 @@
-package stepsDef;
+package stepDef;
 
 
 import cucumber.api.java.en.And;
@@ -28,4 +28,6 @@ public class CommonStepDef {
     public void userIsTakenToPage(String url){
         Assert.assertTrue(commonPage.validatePageURL(url));
     }
+
+
 }

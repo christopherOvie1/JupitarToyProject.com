@@ -1,10 +1,10 @@
-
-
 Feature: contact_Test
+
+  Background:
+    Given user is on "https://jupiter.cloud.planittesting.com/#/"
 
   Scenario Outline: Validate contact message  when mandatory fields are entered
 
-    Given user is on "https://jupiter.cloud.planittesting.com/#/"
     When user clicks on  contact link
     Then user is taken to "contact" page
     And user enters the  mandatory details "<forename>","<email>"  and  "<message>"
@@ -17,9 +17,8 @@ Feature: contact_Test
       | testa       | testa@gmail.com   |ready        |
       |  testab      | testab@yahoo.com | please call  |
 
-  Scenario: Validate error messages
+  Scenario: Validate error messages when field are not entered
 
-    Given user is on "https://jupiter.cloud.planittesting.com/#/"
     When user clicks on  contact link
     Then user is taken to "contact" page
     And user click on submit button

@@ -1,7 +1,7 @@
-package stepsDef;
+package stepDef;
 
 
-//import cucumber.api.PendingException;
+
 import cucumber.api.java.en.And;
 import org.junit.Assert;
 import cucumber.api.java.en.Given;
@@ -26,18 +26,18 @@ public class LoginStepDef{
 
 	 @Given("^user is on \"([^\"]*)\"$")
 	public void userIsOn(String url)  {
-		loginPage.GoToURL(url);
-		Assert.assertTrue(commonPage.ValidateURL(url));
+	loginPage.goToURL(url);
+	Assert.assertTrue(commonPage.ValidateURL(url));
 	}
 
 	@Given("^user click login link$")
-	public void user_click_login_link(){
+	public void user_click_login_link()  {
 		loginPage.clickLoginLink();
 	}
 
 	@And("^user attempts to login by entering  \"([^\"]*)\"  and  \"([^\"]*)\" on a pop up window$")
 	public void userAttemptsToLoginByEnteringAndOnAPopUpWindow(String username, String password) throws Throwable {
-		loginPage.loginIntoApp(username, password);
+	 	loginPage.loginIntoApp(username, password);
 	}
 
 	@Then("^user  \"([^\"]*)\" should be able to confirm login is successful$")
@@ -59,7 +59,7 @@ public class LoginStepDef{
 	}
 
 	@When("^user click on login button$")
-	public void userClickOnLoginButton() {
+	public void userClickOnLoginButton() throws InterruptedException {
 		loginPage.clickLoginButton();
 	}
 
@@ -75,5 +75,12 @@ public class LoginStepDef{
 		String accurateUserName=loginPage.validateCorrectUserName();
 		System.out.println(accurateUserName);
 		Assert.assertEquals(expectedUserName,accurateUserName);
+	}
+
+	@Then("^a pop up window appears$")
+	public void aPopUpWindowAppears() {
+	String popUpCancelBtn=	loginPage.validatePopUpWindow();
+	 Assert.assertTrue(popUpCancelBtn,true);
+
 	}
 }

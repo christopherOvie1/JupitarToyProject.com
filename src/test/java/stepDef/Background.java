@@ -1,4 +1,4 @@
-package stepsDef;
+package stepDef;
 
 
 import base.TestBase;
@@ -22,9 +22,9 @@ public class Background extends TestBase{
 	}
 
 	
-/*	@After
+	@After
 	public void tearDown() {
 		driver.quit();
-	}*/
+	}
 
 }

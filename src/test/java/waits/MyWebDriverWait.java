@@ -14,4 +14,9 @@ public class MyWebDriverWait extends TestBase {
         wait= new WebDriverWait(driver,Time);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+
+   /* public  void waitForURL(String url, int Time){
+        wait= new WebDriverWait(driver,Time);
+        wait.until(ExpectedConditions.urlContains(url));
+    }*/
 }

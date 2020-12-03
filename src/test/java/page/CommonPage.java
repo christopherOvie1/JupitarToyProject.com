@@ -20,8 +20,7 @@ public class CommonPage extends TestBase {
    }
 
 public boolean ValidateURL(String url) {
-   // System.out.println(driver.getCurrentUrl() );
-   // System.out.println( url);
+
 return driver.getCurrentUrl().equalsIgnoreCase(url);
 
 }

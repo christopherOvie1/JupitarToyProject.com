@@ -1,12 +1,7 @@
 page\ShopPage.class
-stepsDef\ShopStepDef.class
 waits\MyWebDriverWait.class
-stepsDef\Background.class
-stepsDef\CommonStepDef.class
 page\ContactPage.class
 page\LoginPage.class
-stepsDef\LoginStepDef.class
-stepsDef\ContactStepDef.class
 page\HomePage.class
 page\CommonPage.class
 runner\TestRunner.class

@@ -5,8 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import waits.MyWebDriverWait;
 
 public class ContactPage extends TestBase{
@@ -48,6 +47,8 @@ public class ContactPage extends TestBase{
         PageFactory.initElements(driver, this);
     }
 
+    //page actions
+
     public void clickContactLink(){
         contactlink.click();
     }
@@ -60,6 +61,7 @@ public class ContactPage extends TestBase{
     public void clickMessageSubmitBtn(){
         messageSubmitBtn.click();
     }
+
     public void confirmContactPageBackButton(){
         MyWebDriverWait wait= new MyWebDriverWait();
         wait.waitForElementToBeVisible(backButton ,30);
