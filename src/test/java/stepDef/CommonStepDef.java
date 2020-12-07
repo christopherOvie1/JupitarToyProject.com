@@ -14,10 +14,10 @@ public class CommonStepDef {
     }
 
 
-    @Then("^user is taken to \"([^\"]*)\"$")
-    public void userIsTakenTo(String url)  {
-        Assert.assertTrue(commonPage.validatePageURL(url));
-    }
+  //  @Then("^user is taken to \"([^\"]*)\"$")
+  //  public void userIsTakenTo(String url)  {
+   //     Assert.assertTrue(commonPage.validatePageURL(url));
+   // }
 
     @And("^user click cart link$")
     public void userClickCartLink() {

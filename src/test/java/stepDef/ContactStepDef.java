@@ -7,6 +7,7 @@ package stepDef;
 
 
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -56,11 +57,11 @@ public class ContactStepDef {
 
     @Then("^user should validate the following error messages  as  \"([^\"]*)\"  , \"([^\"]*)\" and \"([^\"]*)\"$")
     public void userShouldValidateTheFollowingErrorMessagesAsAnd(String forename, String email, String message)  {
-        // System.out.println(contactPage.validateforenameErrorMsg());
+        System.out.println(contactPage.validateforenameErrorMsg());
         Assert.assertEquals(forename,contactPage.validateforenameErrorMsg());
-       // System.out.println( contactPage.validateEmailErrorMsg());
+        System.out.println( contactPage.validateEmailErrorMsg());
         Assert.assertEquals(email,contactPage.validateEmailErrorMsg());
-       // System.out.println( contactPage.validateMessageErrorMsg());
+       System.out.println( contactPage.validateMessageErrorMsg());
         Assert.assertEquals(message,contactPage.validateMessageErrorMsg());
 
     }

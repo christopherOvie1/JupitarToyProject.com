@@ -10,7 +10,7 @@ However this automation is limited to the requirements.
 ### Prerequisite
 
 Ensure Java is installed on your machine to be able to run this project, maven is used to manage the dependencies
-Java 1.8 
+Java 1.3.0.2
 Maven 3.6.3
  
 ### Technical Decisions

@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 
 public class CartPage extends TestBase {
 
@@ -27,7 +29,7 @@ public class CartPage extends TestBase {
     WebElement price;
 
     @FindBy(how= How.XPATH,using ="//tbody//tr")
-    private  WebElement ProductDiscriptionField;
+    private WebElement ProductDiscriptionField;
 
 
     private By productName = By.xpath("//td[1]");
@@ -54,8 +56,9 @@ public class CartPage extends TestBase {
 
     public void captureProductPrices(String product1, String product2) throws InterruptedException {
 
-        WebElement element = ProductDiscriptionField.findElements(productName).stream().filter(x->x.getText().toLowerCase().equals(product1.toLowerCase())).findFirst().get();
+       WebElement element = ProductDiscriptionField.findElements(productName).stream().filter(x->x.getText().toLowerCase().equals(product1.toLowerCase())).findFirst().get();
         productName1 = element.getText();
+
         productPrice1= Double.parseDouble(element.findElements(productPrice).get(0).getText().replace("$", ""));
          productsubTotal1 = Double.parseDouble(element.findElements(subTotal).get(0).getText().replace("$", ""));
 
@@ -66,6 +69,7 @@ public class CartPage extends TestBase {
 
 
         allProductsTotalPrice = Double.parseDouble(driver.findElement(TotalPrice).getText().replace("Total: ",""));
+        System.out.println("total price is:"+allProductsTotalPrice);
 
     }
 

@@ -24,14 +24,9 @@ public class ShopPage extends TestBase{
     private By productName = By.tagName("h4");
     private By productPrice = By.tagName("span");
     private By productBuyBtn = By.tagName("a");
-    private String productSinglePrice;
+   private String productSinglePrice;
     public static double productPrice1;
     public static double productPrice2;
-
-
-
-
-
 
     public ShopPage(){
         PageFactory.initElements(driver,this);
@@ -54,6 +49,7 @@ public class ShopPage extends TestBase{
 
 
             WebElement element = allProducts.stream().filter(x->x.findElement(productName).getText().toLowerCase().equals(product1.toLowerCase())).findFirst().get();
+
             element.findElement(productBuyBtn).click();
 
             productPrice1 = Double.parseDouble(element.findElement(productPrice).getText().replace("$",""));

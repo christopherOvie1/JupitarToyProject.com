@@ -13,6 +13,7 @@ public class Background extends TestBase{
 	// use java super keyword to call method initialization into action defined in the super class  TestBase
 	public Background() {
 		super();
+
 	}
 	//Test
 
