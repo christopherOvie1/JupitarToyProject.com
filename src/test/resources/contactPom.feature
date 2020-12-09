@@ -9,7 +9,7 @@ Feature: contact_Test
     Then user is taken to "contact" page
     And user enters the  mandatory details "<forename>","<email>"  and  "<message>"
     When user click on submit button
-    Then user should be on contact page
+     Then user should be on contact page
     Then user "<forename>" should validate see successMessage
 
     Examples:

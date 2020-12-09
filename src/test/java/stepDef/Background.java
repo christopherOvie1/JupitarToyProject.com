@@ -5,6 +5,7 @@ import base.TestBase;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
+import java.net.MalformedURLException;
 
 
 public class Background extends TestBase{
@@ -18,7 +19,7 @@ public class Background extends TestBase{
 	//Test
 
 	@Before 
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 		TestBase.initialization();
 	}
 

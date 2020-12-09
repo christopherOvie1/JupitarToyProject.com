@@ -1,4 +1,4 @@
-@login
+
 Feature: Login_Test
    As a customer
    In order to use the application

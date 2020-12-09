@@ -10,7 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.*;
 
-
 public class ShopPage extends TestBase{
     @FindBy(how= How.LINK_TEXT,using ="Shop")
     WebElement shopLink;
@@ -24,7 +23,7 @@ public class ShopPage extends TestBase{
     private By productName = By.tagName("h4");
     private By productPrice = By.tagName("span");
     private By productBuyBtn = By.tagName("a");
-   private String productSinglePrice;
+  // private String productSinglePrice;
     public static double productPrice1;
     public static double productPrice2;
 
@@ -36,17 +35,15 @@ public class ShopPage extends TestBase{
         shopLink.click();
     }
 
-    public void selectProduct(String product){
+    /*public void selectProduct(String product){
         WebElement element = allProducts.stream().filter(x->x.findElement(productName).getText().toLowerCase().equals(product.toLowerCase())).findFirst().get();
         element.findElement(productBuyBtn).click();
         productSinglePrice = element.findElement(productPrice).getText();
-    }
-
+    }*/
    public String confirmNumberOfProduct(){
      return numberOfItemsReflected.getText();
    }
     public void selectProduct(String product1, String product2) throws Exception {
-
 
             WebElement element = allProducts.stream().filter(x->x.findElement(productName).getText().toLowerCase().equals(product1.toLowerCase())).findFirst().get();
 
@@ -57,8 +54,5 @@ public class ShopPage extends TestBase{
             element = allProducts.stream().filter(x->x.findElement(productName).getText().toLowerCase().equals(product2.toLowerCase())).findFirst().get();
             element.findElement(productBuyBtn).click();
             productPrice2 = Double.parseDouble(element.findElement(productPrice).getText().replace("$",""));
-
     }
-
-
 }

@@ -19,7 +19,7 @@ Scenario Outline: Validate shopping successful
     Examples:
        | product1     | product2   | quantity1 | quantity2 | forename|email              |address      | cardType  | cardNumber          |
        |  Stuffed Frog|fluffy Bunny| 2         | 2         |testa   |testa@gmail.com     | 3 Green st  | Visa      | 1234 5678 1234 5678 |
-     ##  |  smiley bear |SMILEY FACE | 2         | 2         |testab  | testab@yahoo.com   |17 Browny rd | Mastercard| 2345 1234 2345  1234|
+       |  smiley bear |SMILEY FACE | 2         | 2         |testab  | testab@yahoo.com   |17 Browny rd | Mastercard| 2345 1234 2345  1234|
 
 
 

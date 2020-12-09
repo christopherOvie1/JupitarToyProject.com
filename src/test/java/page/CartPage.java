@@ -41,7 +41,7 @@ public class CartPage extends TestBase {
     private By checkoutBtn = By.xpath("//a[@ class= 'btn-checkout btn btn-success  ng-scope']");
 
 
-    public static  String productName1;
+    public static String productName1;
     public static  String productName2;
     private  double productPrice1;
     private  double productPrice2;

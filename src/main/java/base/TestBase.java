@@ -1,13 +1,19 @@
 package base;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import utils.TestUtility;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -31,12 +37,19 @@ public class TestBase {
         }
     }
     //initialise the browser
-    public static void initialization() {
+    public static void initialization() throws MalformedURLException {
 
         String browserName=	prop.getProperty("browser");
         if(browserName.equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
-            driver= new ChromeDriver();
+           //System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
+          // driver= new ChromeDriver();
+            DesiredCapabilities capability = new DesiredCapabilities();
+            capability.setBrowserName("chrome");
+            capability.setPlatform(Platform.WINDOWS);
+            ChromeOptions options = new ChromeOptions();
+            options.merge(capability);
+            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+
         }
 
         else if (browserName.equals("Firefox")) {

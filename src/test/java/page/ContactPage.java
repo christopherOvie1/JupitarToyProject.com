@@ -70,6 +70,7 @@ public class ContactPage extends TestBase{
     public String validateSuccessMessageTxt(){
        return successMessageTxt.getText();
     }
+
     public  String validateFeebbackErrorMessage(){
       return   feebbackErrorMessage.getText();
     }
